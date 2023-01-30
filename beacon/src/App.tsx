@@ -63,16 +63,21 @@ function App() {
     getData()
   }, [])
 
+  function refreshValue() {
+    getData();
+  }
+
 console.log(data)
 
   return (
     <div className="App">
       <header>
-      <h1>Random value provided by the BEACON API</h1>
+      <h1>BEACON API</h1>
+      <p>This API generates a pseudo-random value that changes every minute. <br/> Click on the button to have the latest value. </p>
       </header>
 
       <main>
-      <button>Show me the last random value</button>
+      <button value="Last Random Value" onClick={refreshValue}>Show me the last random value</button>
       
       <p>{data}</p>
       
