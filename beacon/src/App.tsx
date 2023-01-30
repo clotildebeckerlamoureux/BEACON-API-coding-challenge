@@ -56,18 +56,11 @@ function App() {
       const result = response.pulse.outputValue
       console.log("result",result)
       setData(result);
-      console.log("setData",setData(result))
     }
-
-  useEffect(() => {
-    getData()
-  }, [])
 
   function refreshValue() {
     getData();
   }
-
-console.log(data)
 
   return (
     <div className="App">
